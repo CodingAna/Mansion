@@ -1,17 +1,17 @@
 ## Variables:
 A:
 B:
-C:
-D:
-E:
-F:
-G:
+C: Current chunk X
+D: Current chunk Y
+E: Maximum chunk X (constant)
+F: Maximum chunk Y (constant)
+G: *Reserved*
 H: Player height level limit
-I:
-J:
+I: *Reserved*
+J: *Reserved*
 K: Currently pressed key
-L:
-M:
+L: *Reserved*
+M: *Reserved*
 N:
 O:
 P:
@@ -35,7 +35,8 @@ Z: Player height level
 6: *Reserved*
 7: *Reserved*
 8: Map assignment (rectangular world, see int values below)
-9: Assigned numbers to tiles (i.e. No. 0 = Char / Tile 5)
+9: *Reserved*
+**9: Assigned numbers to tiles (i.e. No. 0 = Char / Tile 5)**
 
 ## Misc:
 ### Map assignment:

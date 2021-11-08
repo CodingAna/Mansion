@@ -1,5 +1,9 @@
 'ProgramMode:RUN
 
+-1->C
+-1->D
+-1->E
+-1->F
 1->H
 0->K
 1->Q
@@ -10,6 +14,14 @@
 4->Y
 1->Z
 
+{-1}->List 1
+{-1}->List 7
+{1,0,2,1,1,2,3}->List 8
+{-1}->List 9
+
+1->E
+1->F
+
 While 1
 Getkey->K
 
@@ -18,17 +30,73 @@ Then Break
 IfEnd
 
 If K=27
-Then X+1->X
-1->Q
+Then 1->Q
+X+1->X
+If X>21 And C<E
+Then 1->X
+IfEnd
+IfEnd
 
+If K=38
+Then 1->Q
+X-1->X
+If X<1 And Not C<1
+Then 21->X
+IfEnd
+IfEnd
+
+If K=28
+Then 1->Q
+Y-1->Y
+If Y<1 And Not D<1
+Then 7->Y
+IfEnd
+IfEnd
+
+If K=37
+Then 1->Q
+Y+1->Y
+If Y>7 And D<F
+Then 1->Y
+IfEnd
 IfEnd
 
 If R=1
-0->R
-EndIf
+Then 0->R
 
+1->I
+1->J
+-1->G
+While List 8[I]<>3
+If J=D
+Then Break
+IfEnd
+I+1->L
+
+If List 8[I]=2 And List 8[L]<>3
+Then J+1->J
+L->G
+IfEnd
+
+I+1->I
 WhileEnd
 
-{}->List 1
-{1,0,2,1,1,2,3}->List 8
-{}->List 9
+{-1}->List 7
+For 1->I To J
+G+I-1->L
+List 8[L]->List 7[I]
+Next
+
+G->E
+
+IfEnd
+
+If Q=1
+Then 0->Q
+Blue Locate X,Y,"_#E5A2_"
+V>0 And W>0=>Locate V,W," "
+X->V
+Y->W
+IfEnd
+
+WhileEnd
