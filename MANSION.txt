@@ -1,0 +1,34 @@
+'ProgramMode:RUN
+
+1->H
+0->K
+1->Q
+1->R
+-1->V
+-1->W
+11->X
+4->Y
+1->Z
+
+While 1
+Getkey->K
+
+If K=47
+Then Break
+IfEnd
+
+If K=27
+Then X+1->X
+1->Q
+
+IfEnd
+
+If R=1
+0->R
+EndIf
+
+WhileEnd
+
+{}->List 1
+{1,0,2,1,1,2,3}->List 8
+{}->List 9
