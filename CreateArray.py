@@ -15,6 +15,18 @@ BLOCK_TYPES = {
 
 }
 
+"""
+For Y Chunk:
+    For X Chunk:
+        temp = []
+        For Y Pixel:
+            For X Pixel:
+                p = clamped(pixel(xChunk*21+xPixel, yChunk*7+yPixel))
+                block = BLOCK_TYPES[p]
+                temp.append(block)
+        array.append(temp)
+"""
+
 arrays = []
 
 for y in range(img.height):
