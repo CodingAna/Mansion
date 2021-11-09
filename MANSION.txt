@@ -1,9 +1,9 @@
 'ProgramMode:RUN
 
--1->C
--1->D
--1->E
--1->F
+1->C
+1->D
+1->E
+1->F
 1->H
 0->K
 1->Q
@@ -15,12 +15,6 @@
 1->Z
 
 {-1}->List 1
-{-1}->List 7
-{1,0,2,1,1,2,3}->List 8
-{-1}->List 9
-
-1->E
-1->F
 
 While 1
 Getkey->K
@@ -64,39 +58,37 @@ IfEnd
 If R=1
 Then 0->R
 
-1->I
-1->J
--1->G
-While List 8[I]<>3
-If J=D
-Then Break
-IfEnd
-I+1->L
-
-If List 8[I]=2 And List 8[L]<>3
-Then J+1->J
-L->G
-IfEnd
-
-I+1->I
-WhileEnd
-
-{-1}->List 7
-For 1->I To J
-G+I-1->L
-List 8[L]->List 7[I]
+1->G
+For 1->I To F
+For 1->J To E
+I=D And J=C=>Break
+G+1->G
+Next
 Next
 
-G->E
+TODO: Draw List x[G..G+7*21]
+For 1->I To 7
+""->Str I
+For 1->J To 21
+StrJoin(Str I, "TILE")
+Next
+Next
+
+For 1->I To 7
+Locate 1,I,Str I
+Next
+TODO: End Draw List x[G..G+7*21]
 
 IfEnd
 
 If Q=1
 Then 0->Q
+
 Blue Locate X,Y,"_#E5A2_"
 V>0 And W>0=>Locate V,W," "
 X->V
 Y->W
+
 IfEnd
 
 WhileEnd
