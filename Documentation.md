@@ -12,8 +12,8 @@ J: *Reserved*
 K: Currently pressed key
 L: *Reserved*
 M: *Reserved*
-N: *Reserved*
-O:
+N: *Reserved as current tile on world render*
+O: *Reserved*
 P: *Partially reserved*
 Q: Boolean if player is currently rendering / has to be
 R: Boolean if world is currently rendering / has to be

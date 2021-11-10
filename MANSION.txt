@@ -79,22 +79,19 @@ IfEnd
 If Q=1 Or R=1
 Then 1->G
 For 1->I To F*E
-MOD(I,F)=D And MOD(J,E)=C=>Break
+MOD(I,F)=D And MOD(I,E)=C=>Break
 G+1->G
 Next
 
-1->L
+1->O
 For 1->I To 7*21
 MOD(I,7)=Y And MOD(I,21)=X=>Break
-L+1->L
+O+1->O
 Next
 
-TODO: This calculation does not work properly (at least for rendering the level)
-TODO: Fix here. Takes too long to calc -> slow
+O->P
 
-L->P
-
-List Z[L]->T
+List Z[O]->T
 If T=1
 Then K=27=>X-1->X
 K=38=>X+1->X
@@ -110,8 +107,8 @@ Then 0->R
 For 1->I To 7
 ""->Str 8
 For 1->J To 21
-G+L-1->M
-List Z[M]->N
+((G-1)*21*7)+L->M
+List Z[M]->N TODO: Fix this
 N=0=>Str 8+" "->Str 8
 N=1=>Str 8+"X"->Str 8
 L+1->L
