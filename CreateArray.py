@@ -46,5 +46,7 @@ for yc in range(yChunk):
                 block = BLOCK_TYPES[p]
                 floor.append(block)
 
+# TODO: Export chunk limits too. (1->E, 2->F)
+
 f = "{" + ",".join(t for t in floor) + "}->List 1"
 print(f)
