@@ -14,7 +14,7 @@ L: *Reserved*
 M: *Reserved*
 N: *Reserved*
 O:
-P:
+P: *Partially reserved*
 Q: Boolean if player is currently rendering / has to be
 R: Boolean if world is currently rendering / has to be
 S:
