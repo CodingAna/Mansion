@@ -1,11 +1,11 @@
 ## Variables:
 A: *Reserved*
 B: *Reserved*
-C: Current chunk X (calculate a valid start chunk or set 1,1 to be filled=valid?)
+C: Current chunk X
 D: Current chunk Y
 E: Limit chunk X
 F: Limit chunk Y
-G: *Reserved*
+G: Current chunk id / num for list access
 H: Player height level limit
 I: *Reserved*
 J: *Reserved*
@@ -18,7 +18,7 @@ P: *Partially reserved*
 Q: Boolean if player is currently rendering / has to be
 R: Boolean if world is currently rendering / has to be
 S:
-T: Next tile (after position change = current tile, then reset position)
+T: Current tile
 U:
 V: Previous player X position
 W: Previous player Y position
