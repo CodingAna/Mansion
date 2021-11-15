@@ -2,7 +2,7 @@
 1->C
 1->D
 1->E
-1->F
+2->F
 1->H
 0->K
 9->P
@@ -27,13 +27,9 @@ IfEnd
 If K=27
 Then 1->Q
 X+1->X
-If X>21
-Then If C<E
-Then 1->X
-C+1->C
-Else 21->X
-0->Q
-IfEnd
+If X>21*E
+Then 0->Q
+21*E->X
 IfEnd
 IfEnd
 
@@ -41,12 +37,8 @@ If K=38
 Then 1->Q
 X-1->X
 If X<1
-Then If C<1
-Then 21->X
-C-1->C
-Else 1->X
-0->Q
-IfEnd
+Then 0->Q
+1->X
 IfEnd
 IfEnd
 
@@ -54,40 +46,32 @@ If K=28
 Then 1->Q
 Y-1->Y
 If Y<1
-Then If D<1
-Then 7->Y
-D-1->D
-Else 1->Y
-0->Q
-IfEnd
+Then 0->Q
+1->Y
 IfEnd
 IfEnd
 
 If K=37
 Then 1->Q
 Y+1->Y
-If Y>7
-Then If D<F
-Then 1->Y
-D+1->D
-Else 7->Y
-0->Q
-IfEnd
+If Y>7*F
+Then 0->Q
+7*F->Y
 IfEnd
 IfEnd
 
-If Q=1 Or R=1
+If Q=1
 Then 1->G
+Int (X/21)+1->C
+Int (Y/7)+1->D
 For 1->I To F*E
-MOD(I,F)=D And MOD(I,E)=C=>Break
+If MOD(I,E)=C And MOD(I,F)=D
+Then Break
+IfEnd
 G+1->G
 Next
 
-1->O
-For 1->I To 7*21
-MOD(I,7)=Y And MOD(I,21)=X=>Break
-O+1->O
-Next
+21*E*MOD((Y-1),7)+X->O
 
 O->P
 
@@ -98,6 +82,7 @@ K=38=>X+1->X
 K=28=>Y+1->Y
 K=37=>Y-1->Y
 IfEnd
+
 IfEnd
 
 If R=1
@@ -107,8 +92,8 @@ Then 0->R
 For 1->I To 7
 ""->Str 8
 For 1->J To 21
-((G-1)*21*7)+L->M
-List Z[M]->N TODO: Fix this
+(G-1)*7*21+(I*7)+J->O TODO: Should work
+List Z[O]->N
 N=0=>Str 8+" "->Str 8
 N=1=>Str 8+"X"->Str 8
 L+1->L
