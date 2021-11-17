@@ -17,7 +17,7 @@ O:
 P: Position of player in the list
 Q: Boolean if player is currently rendering / has to be
 R: Boolean if world is currently rendering / has to be
-S:
+S: *Reserved for coming story*
 T: Current tile
 U:
 V: Previous player X position
