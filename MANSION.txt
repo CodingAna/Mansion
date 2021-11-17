@@ -83,7 +83,7 @@ For 1->J To 21
 L+B->L
 List Z[L]->M
 M=0=>Str 8+" "->Str 8
-M=1=>Str 8+"X"->Str 8
+M=1=>Str 8+"_#E6A6_"->Str 8
 Next
 I=1=>Str 8->Str 1
 I=2=>Str 8->Str 2
