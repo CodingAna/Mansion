@@ -1,23 +1,23 @@
 ## Variables:
-A: *Reserved*
-B: *Reserved*
-C: Current chunk X
-D: Current chunk Y
-E: Limit chunk X
-F: Limit chunk Y
-G: Current chunk id / num for list access
+A:
+B: Beginning of current chunk
+C: Chunk limit X
+D: Chunk limit Y
+E:
+F:
+G:
 H: Player height level limit
-I: *Reserved*
-J: *Reserved*
+I: *Reserved for loops*
+J: *Reserved for loops*
 K: Currently pressed key
-L: *Reserved*
-M: *Reserved*
-N: *Reserved as current tile on world render*
-O: *Reserved*
-P: *Partially reserved*
+L: *Reserved for calculating list positions*
+M: *Reserved for current tile in list for rendering*
+N:
+O:
+P: Position of player in the list
 Q: Boolean if player is currently rendering / has to be
 R: Boolean if world is currently rendering / has to be
-S:
+S: *Reserved for coming story*
 T: Current tile
 U:
 V: Previous player X position
