@@ -33,7 +33,7 @@ For Y Chunk:
                 temp.append(block)
         array.append(temp)
 """
-xChunk, yChunk = 1, 1
+xChunk, yChunk = 1, 2
 xPixel, yPixel = 21, 7
 floor = []
 for yc in range(yChunk):
