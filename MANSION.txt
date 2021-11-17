@@ -92,7 +92,7 @@ Then 0->R
 For 1->I To 7
 ""->Str 8
 For 1->J To 21
-(G-1)*7*21+(I*7)+J->O TODO: Should work
+(G-1)*7*21+(I*7)+J->O #TODO Does nto wotk
 List Z[O]->N
 N=0=>Str 8+" "->Str 8
 N=1=>Str 8+"X"->Str 8
