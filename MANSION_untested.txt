@@ -1,0 +1,106 @@
+'ProgramMode:RUN
+1->C
+2->D
+1->H
+0->K
+1->Q
+1->R
+0->T
+-1->V
+-1->W
+11->X
+4->Y
+1->Z
+
+{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1}->List 1
+
+While 1
+Getkey->K
+
+If K=47
+Then Break
+IfEnd
+
+If K=27
+Then 1->Q
+X+1->X
+If X>21*C
+Then 0->Q
+21*C->X
+IfEnd
+IfEnd
+
+If K=38
+Then 1->Q
+X-1->X
+If X<1
+Then 0->Q
+1->X
+IfEnd
+IfEnd
+
+If K=28
+Then 1->Q
+Y-1->Y
+If Y<1
+Then 0->Q
+1->Y
+IfEnd
+IfEnd
+
+If K=37
+Then 1->Q
+Y+1->Y
+If Y>7*D
+Then 0->Q
+7*D->Y
+IfEnd
+IfEnd
+
+If R=1
+Then 0->R
+
+(Y-1)*(21*C)+X->P
+P-MOD(P,147)->B
+
+For Y->I To Y+7
+""->Str 8
+For X->J To X+21
+(J-1)*(21*E)+I->L
+L+B->L
+List Z[L]->M
+M=0=>Str 8+" "->Str 8
+M=1=>Str 8+"X"->Str 8
+Next
+I=1=>Str 8->Str 1
+I=2=>Str 8->Str 2
+I=3=>Str 8->Str 3
+I=4=>Str 8->Str 4
+I=5=>Str 8->Str 5
+I=6=>Str 8->Str 6
+I=7=>Str 8->Str 7
+Next
+
+Locate 1,1,Str 1
+Locate 1,2,Str 2
+Locate 1,3,Str 3
+Locate 1,4,Str 4
+Locate 1,5,Str 5
+Locate 1,6,Str 6
+Locate 1,7,Str 7
+
+IfEnd
+
+Locate 1,1,P
+
+If Q=1
+Then 0->Q
+
+Blue Locate MOD(X,21),MOD(Y,7),"_#E5A2_"
+V>0 And W>0=>Locate MOD(V,7),MOD(W,21)," "
+X->V
+Y->W
+
+IfEnd
+
+WhileEnd
