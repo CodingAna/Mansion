@@ -31,7 +31,7 @@ Z: Player height level
 2: Floor 2
 3: Floor 3
 4: Floor 4
-5: *Reserved*
+5: *Reserved for NPC positions*
 6: *Reserved*
 7: *Reserved*
 8: *Reserved*
@@ -45,3 +45,7 @@ Z: Player height level
 ### Variable interpretation
 #### S
 To be seen as a binary value, i.e. 001100101100. 1 bit = Story completed, 0 bit = Story uncompleted.
+
+### List interpretation
+#### List 5
+Every odd value is the X-position of an NPC, every even position stands for each Y-position.
