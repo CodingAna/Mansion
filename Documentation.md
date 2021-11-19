@@ -17,7 +17,7 @@ O:
 P: Position of player in the list
 Q: Boolean if player is currently rendering / has to be
 R: Boolean if world is currently rendering / has to be
-S: *Reserved for coming story*
+S: *Reserved for coming story, see interpretation below*
 T: Current tile
 U:
 V: Previous player X position
@@ -41,3 +41,7 @@ Z: Player height level
 ### Tiles:
 0: Air
 1..: Blocks
+
+### Variable interpretation
+#### S
+To be seen as a binary value, i.e. 001100101100. 1 bit = Story completed, 0 bit = Story uncompleted.
