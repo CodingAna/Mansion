@@ -79,7 +79,7 @@ P-MOD(P,147)->B
 For 1->I To 7
 ""->Str 8
 For 1->J To 21
-(I-1)*(21*E)+J->L
+(I-1)*(21*C)+J->L
 L+B->L
 List Z[L]->M
 M=0=>Str 8+" "->Str 8
