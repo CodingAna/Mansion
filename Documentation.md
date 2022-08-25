@@ -19,7 +19,7 @@
 - R: Boolean if world is currently rendering / has to be
 - S: *Reserved for coming story, see interpretation below*
 - T: Current tile
-- U:
+- U: Water state for animation
 - V: Previous player X position
 - W: Previous player Y position
 - X: Player X position
@@ -46,6 +46,7 @@
 ### Tiles
 - 0: Air
 - 1..: Blocks
+- 90..: Water
 - 100: NPC
 - 201..: *see items below*
 
@@ -63,7 +64,23 @@ Every odd value is the X-position of an NPC, every even position stands for each
 
 ### TODO / Notes / Comments
 - Use MOD() only when really needed to. This operation is very slow!
+- Create fluids. Maybe create a new list for fluids and generate a string for each "fluid block" in the position list and then Locate xy each string for efficiency (and a smooth animation)
 - Make the text in the conversation scrollable to allow texts > len 45 (9*5) maybe make the bottom open when the user can scroll
 - \[check\] Render NPCs (go through the whole List 5 so it doesn't need to be sorted by chunks)
 - \[check\]I can reuse the code for getting the NPC id for the inventory because it's based on the same system
 - \[check\]Make items collectable (I think somewhere after the player moves when checking T=100 for the NPC)
+
+=       =
+~~      _#E6B1_
+~       _#E6B5_
+===     _#E6B2_
+~==     _#E6B4_
+
+'ProgramMode:RUN
+"=_#E6B1__#E6B5__#E6B2__#E6B4_"->Str 1
+"   _#E6C4_"->Str 2
+" ___#E6D7___"->Str 3
+"_#E699_  _#E6D7_  _#E696_"->Str 4
+"| _#E6B1__#E6D7__#E6B1_ |"->Str 5
+"| _#E6B1__#E6B1__#E6B1_ |"->Str 6
+"_#E698_______#E697_"->Str 7
