@@ -3,23 +3,23 @@
 - B: Beginning of current chunk
 - C: Chunk limit X
 - D: Chunk limit Y
-- E:
-- F: 
-- G:
+- E: *Cache 1 (item type)*
+- F: *Cache 2 (item count)*
+- G: *Cache for needed item in the current mission/story*
 - H: Player height level limit
 - I: *Reserved for loops*
 - J: *Reserved for loops*
 - K: Currently pressed key
 - L: *Reserved for calculating list positions*
 - M: *Reserved for current tile in list for rendering*
-- N: *Reserved for current NPC x position to render later on*
-- O: *Reserved for current NPC y position to render later on*
+- N: *Reserved for current NPC x position to render later on* **to be removed**
+- O: *Reserved for current NPC y position to render later on* **to be removed**
 - P: Position of player in the (floor) list
 - Q: Boolean if player is currently rendering / has to be
 - R: Boolean if world is currently rendering / has to be
 - S: *Reserved for coming story, see interpretation below*
 - T: Current tile
-- U: 
+- U:
 - V: Previous player X position
 - W: Previous player Y position
 - X: Player X position
@@ -31,16 +31,16 @@
 - 2: Floor 2
 - 3: Floor 3
 - 4: Floor 4
-- 5: *Reserved for NPC positions*
-- 6: *Reserved for story progess (0=not started, 1=active, 2=finished)*
-- 7: *Reserved*
+- 5: NPC positions
+- 6: Story progess (0=not started, 1=active, 2=finished)
+- 7: Inventory (two values representing the item type and the count of it, {Type,Count})
 - 8: *Reserved*
 - 9: *Reserved*
 
 ## Strings
 - 1-7: World-rendering (lines 1-7)
 - 8: Temporary line of world for faster rendering
-- 9: Story completion with each char representing the status of each story
+- ~~9: Story completion with each char representing the status of each story~~
 - 10: Current NPC conversation text
 
 ## Misc
@@ -48,6 +48,11 @@
 - 0: Air
 - 1..: Blocks
 - 100: NPC
+- 201..: *see items below*
+
+### Items
+- 1: Cake
+- 2: Sword
 
 ### Variable interpretation
 #### S:
@@ -61,3 +66,5 @@ Every odd value is the X-position of an NPC, every even position stands for each
 - Use MOD() only when really needed to. This operation is very slow!
 - \[check\] Render NPCs (go through the whole List 5 so it doesn't need to be sorted by chunks)
 - Make the text in the conversation scrollable to allow texts > len 45 (9*5) maybe make the bottom open when the user can scroll
+- I can reuse the code for getting the NPC id for the inventory because it's based on the same system
+- Make items collectable (I think somewhere after the player moves when checking T=100 for the NPC)
