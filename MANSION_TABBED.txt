@@ -115,10 +115,7 @@ While 1
 
         For 1->I To 5
             I-1->A
-            9A+1->E
-            9A+9->F
-            
-            Locate 2,I+1,StrMid(Str 10,E,9)
+            Locate 2,I+1,StrMid(Str 10,9A+1,9)
         Next
         -S->S
     IfEnd

@@ -3,8 +3,8 @@
 - B: Beginning of current chunk
 - C: Chunk limit X
 - D: Chunk limit Y
-- E: *Test cache 1*
-- F: *Test cache 2*
+- E:
+- F: 
 - G:
 - H: Player height level limit
 - I: *Reserved for loops*
