@@ -40,7 +40,6 @@
 ## Strings
 - 1-7: World-rendering (lines 1-7)
 - 8: Temporary line of world for faster rendering
-- ~~9: Story completion with each char representing the status of each story~~
 - 10: Current NPC conversation text
 
 ## Misc
@@ -64,7 +63,7 @@ Every odd value is the X-position of an NPC, every even position stands for each
 
 ### TODO / Notes / Comments
 - Use MOD() only when really needed to. This operation is very slow!
-- \[check\] Render NPCs (go through the whole List 5 so it doesn't need to be sorted by chunks)
 - Make the text in the conversation scrollable to allow texts > len 45 (9*5) maybe make the bottom open when the user can scroll
-- I can reuse the code for getting the NPC id for the inventory because it's based on the same system
-- Make items collectable (I think somewhere after the player moves when checking T=100 for the NPC)
+- \[check\] Render NPCs (go through the whole List 5 so it doesn't need to be sorted by chunks)
+- \[check\]I can reuse the code for getting the NPC id for the inventory because it's based on the same system
+- \[check\]Make items collectable (I think somewhere after the player moves when checking T=100 for the NPC)
